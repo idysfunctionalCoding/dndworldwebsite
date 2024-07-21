@@ -16,6 +16,7 @@ import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import { Route, Routes, Outlet } from "react-router";
 import NationInfoPage from "./pages/NationPage";
+import WorldMap from "./pages/WorldMapPage";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -24,6 +25,7 @@ export const App = () => (
         <Route path="/" element={<HomePage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/nationinfo" element={<NationInfoPage />} />
+        <Route path="/worldmap" element={<WorldMap />} />
       </Routes>
   </ChakraProvider>
 );

@@ -1,14 +1,10 @@
 import {
   Drawer,
-  DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Button,
-  Input,
-  IconButton,
   useDisclosure,
   Accordion,
   AccordionItem,
@@ -36,11 +32,16 @@ const DrawerExample = () => {
 
   return (
     <>
-      <IconButton
+      <Button
         aria-label="SidebarMenu"
-        icon={<IoIosMenu />}
+        leftIcon={<IoIosMenu />}
         onClick={onOpen}
-      />
+        display={"flex"}
+        alignItems={"center"}
+        margin={"auto"}
+      >
+        Menu
+      </Button>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -110,7 +111,9 @@ const DrawerExample = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Button variant="link">Dominon of death</Button>
+                <Link to="/worldmap">
+                  <Button variant="link" onClick={onClose}>World Map</Button>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
