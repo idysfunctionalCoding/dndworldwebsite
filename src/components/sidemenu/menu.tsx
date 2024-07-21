@@ -18,9 +18,21 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { IoIosMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const DrawerExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const nations = [
+    {
+      name: "Holy Earis Empire",
+      stateName: "holyEarisEmpire",
+    },
+    {
+      name: "Dominion of Xaendriad",
+      stateName: "dominionOfXaendriad",
+    },
+  ];
 
   return (
     <>
@@ -45,7 +57,34 @@ const DrawerExample = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Button variant='link'>Dominon of death</Button>
+                <Accordion>
+                  <AccordionItem>
+                    <h2>
+                      <AccordionButton>
+                        <Box as="span" flex="1" textAlign="left">
+                          Nations
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    {nations.map((nation) => (
+                      <AccordionPanel>
+                        <Link
+                          to="/nationinfo"
+                          state={{ nation: `${nation.stateName}` }}
+                        >
+                          <Button
+                            colorScheme="teal"
+                            variant="link"
+                            onClick={onClose}
+                          >
+                            {nation.name}
+                          </Button>
+                        </Link>
+                      </AccordionPanel>
+                    ))}
+                  </AccordionItem>
+                </Accordion>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -58,7 +97,7 @@ const DrawerExample = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Button  variant='link'>Dominon of death</Button>
+                <Button variant="link">Dominon of death</Button>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -71,7 +110,7 @@ const DrawerExample = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Button  variant='link'>Dominon of death</Button>
+                <Button variant="link">Dominon of death</Button>
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -84,11 +123,21 @@ const DrawerExample = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Button colorScheme='teal' variant='link'>Articles</Button>
+                <Link to="/articles">
+                  <Button colorScheme="teal" variant="link" onClick={onClose}>
+                    Articles
+                  </Button>
+                </Link>
+              </AccordionPanel>
+              <AccordionPanel pb={4}>
+                <Link to="/sessionrecaps">
+                  <Button colorScheme="teal" variant="link" onClick={onClose}>
+                    Session Recaps
+                  </Button>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
-
         </DrawerContent>
       </Drawer>
     </>

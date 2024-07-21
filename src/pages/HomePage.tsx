@@ -1,18 +1,11 @@
 import {
-  Box,
-  Heading,
-  Container,
   Text,
   Button,
   Stack,
-  Icon,
-  useColorModeValue,
-  createIcon,
   Flex,
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
-import { url } from "inspector";
 
 const HomePage = () => {
   const headerStyle = {
@@ -37,15 +30,16 @@ const HomePage = () => {
           px={useBreakpointValue({ base: 4, md: 8 })}
           bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
         >
-          <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
+          <Stack maxW={"2xl"} align={"center"} spacing={6}>
             <Text
               color={"white"}
               fontWeight={700}
               lineHeight={1.2}
               fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+              align={"center"}
             >
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              eiusmod tempor
+              Welecome To Parker's DM Website Where I Hold All Information For
+              My Players
             </Text>
             <Stack direction={"row"}>
               <Button

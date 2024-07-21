@@ -15,13 +15,15 @@ import Header from "./components/header/header";
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import { Route, Routes, Outlet } from "react-router";
+import NationInfoPage from "./pages/NationPage";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="articles" element={<ArticlesPage />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/nationinfo" element={<NationInfoPage />} />
       </Routes>
   </ChakraProvider>
 );
