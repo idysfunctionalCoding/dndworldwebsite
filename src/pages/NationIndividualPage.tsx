@@ -7,9 +7,6 @@ import {
   Button,
   Stack,
   VStack,
-  HStack,
-  Link,
-  IconButton,
   useBreakpointValue,
   Tab,
   TabPanels,
@@ -17,69 +14,83 @@ import {
   TabPanel,
   Tabs,
   Divider,
+  Grid,
 } from "@chakra-ui/react";
 import { NavBar } from "../components/header/headerv2";
+import { nationPageConfig } from "../config/nationColorConfig";
+import { LandmarkCard } from "../components/landmarkcard/landmarkCard";
 
-const FantasyUI = () => {
+const IndividualNationPage = (props: nationPageConfig) => {
+  const landmark = {
+    heading: "name",
+    text: "The Kingdom of Eldoria is a realm of ancient magic and noble knights. Its lush forests and towering castles are home to many legendary creatures and brave adventurers.",
+  };
+
   return (
-    <Box
-      backgroundImage={"url(/images/earisBackGroundImage.png)"}
-      width={"100%"}
-      height={"100%"}
-      backgroundPosition={"center"}
-      backgroundSize={"cover"}
-      backgroundRepeat={"no-repeat"}
-    >
-      <NavBar></NavBar>
-      <Flex
-        justifyContent={"left"}
-        alignItems={"center"}
-        alignContent={"left"}
-        h={"75vh"}
+    <>
+      <Box
+        backgroundImage={props.backgroundImage}
+        width={"100%"}
+        height={"100%"}
+        backgroundPosition={"center"}
+        backgroundSize="cover"
+        backgroundRepeat={"no-repeat"}
       >
-        <VStack w={"full"} justify={"left"} align={"left"} pl={"10%"}>
-          <Stack maxW={"2xl"} spacing={6}>
-            <Text
-              color={"rgb(249, 249, 255)"}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
-            >
-              The Goddess' Light Will Protect Us On Our Holy Conquest
-            </Text>
-            <Stack direction={"row"}>
-              <Button
-                bg={"blue.400"}
-                rounded={"full"}
-                color={"white"}
-                _hover={{ bg: "blue.500" }}
+        <NavBar></NavBar>
+        <Flex
+          justifyContent={"left"}
+          alignItems={"center"}
+          alignContent={"left"}
+          h={"99vh"}
+        >
+          <VStack w={"full"} justify={"left"} align={"left"} pl={"10%"}>
+            <Stack maxW={"2xl"} spacing={6}>
+              <Heading as="h1" size="4xl">
+                {props.name}
+              </Heading>
+              <Text
+                color={"rgb(249, 249, 255)"}
+                fontWeight={500}
+                lineHeight={1.2}
+                fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                size="lg"
               >
-                Show me more
-              </Button>
-              <Button
-                bg={"whiteAlpha.300"}
-                rounded={"full"}
-                color={"white"}
-                _hover={{ bg: "whiteAlpha.500" }}
-              >
-                Show me more
-              </Button>
+                {props.heroText}
+              </Text>
             </Stack>
-          </Stack>
-        </VStack>
-      </Flex>
-      <Flex justifyContent={'center'}>
-        <Divider size='xl' width={'75%'} border={'1px'}></Divider>
-      </Flex>
-      <Flex w={"80%"} margin={"auto"}>
-        <Box p={5} margin="auto" borderRadius="md" boxShadow="md" w={"100%"}>
-          <Tabs variant="soft-rounded" colorScheme="teal">
-            <TabList mb={5} justifyContent="center">
-              <Tab>Overview</Tab>
-              <Tab>History</Tab>
-              <Tab>Culture</Tab>
-              <Tab>Geography</Tab>
-              <Tab>Politics</Tab>
+          </VStack>
+        </Flex>
+      </Box>
+      <Box pt={'3vh'} backgroundColor={props.backgroundColorStatic}>
+        <Flex justifyContent={"center"} align={'center'}>
+          <Heading>
+            Signifigant Landmarks
+          </Heading>
+        </Flex>
+        <Grid
+          templateColumns="repeat(4, 1fr)"
+          gap={4}
+          ml={"auto"}
+          mr={"auto"}
+          width={"80%"}
+          mt={"3vh"}
+          h={"100%"}
+        >
+          <LandmarkCard {...landmark} />
+          <LandmarkCard {...landmark} />
+          <LandmarkCard {...landmark} />
+          <LandmarkCard {...landmark} />
+        </Grid>
+      </Box>
+      <Flex w={"100%"} margin={"auto"} pt={"5vh"} backgroundColor={props.backgroundColorStatic}>
+        <Box margin="auto" borderRadius="md" boxShadow="md" w={"80%"}>
+          <Tabs variant="soft-rounded">
+            <TabList mb={5} justifyContent="center" color={props.highlightColor}>
+              <Tab color={props.color}>Overview</Tab>
+              <Tab color={props.color}>History</Tab>
+              <Tab color={props.color}>Culture</Tab>
+              <Tab color={props.color}>Geography</Tab>
+              <Tab color={props.color}>Politics</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -131,8 +142,8 @@ const FantasyUI = () => {
           </Tabs>
         </Box>
       </Flex>
-    </Box>
+    </>
   );
 };
 
-export default FantasyUI;
+export default IndividualNationPage;

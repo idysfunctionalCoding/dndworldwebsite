@@ -1,24 +1,14 @@
-import * as React from "react";
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { Logo } from "./Logo";
-import Header from "./components/header/header";
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
-import { Route, Routes, Outlet } from "react-router";
+import { Route, Routes } from "react-router";
 import NationInfoPage from "./pages/NationPage";
 import WorldMap from "./pages/WorldMapPage";
-import { NavBar } from "./components/header/headerv2";
-import FantasyUI from "./pages/NationIndividualPage";
+import IndividualNationPage from "./pages/NationIndividualPage";
+import { earisEmpirePageCofig } from "./config/nationColorConfig";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -27,7 +17,7 @@ export const App = () => (
       <Route path="/articles" element={<ArticlesPage />} />
       <Route path="/nationinfo" element={<NationInfoPage />} />
       <Route path="/worldmap" element={<WorldMap />} />
-      <Route path='/nations' element={<FantasyUI />} />
+      <Route path='/nations' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
     </Routes>
   </ChakraProvider>
 );
