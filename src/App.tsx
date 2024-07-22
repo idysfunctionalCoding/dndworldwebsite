@@ -5,7 +5,7 @@ import {
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import { Route, Routes } from "react-router";
-import NationInfoPage from "./pages/NationPage";
+import NationsInfoPage from "./pages/NationPage";
 import WorldMap from "./pages/WorldMapPage";
 import IndividualNationPage from "./pages/NationIndividualPage";
 import { earisEmpirePageCofig } from "./config/nationColorConfig";
@@ -15,9 +15,9 @@ export const App = () => (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/articles" element={<ArticlesPage />} />
-      <Route path="/nationinfo" element={<NationInfoPage />} />
       <Route path="/worldmap" element={<WorldMap />} />
-      <Route path='/nations' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
+      <Route path='/nations/holyearisampire' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
+      <Route path='/nations' element={<NationsInfoPage /> } />
     </Routes>
   </ChakraProvider>
 );
