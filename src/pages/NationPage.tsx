@@ -72,28 +72,6 @@ const NationsInfoPage = () => {
       </Flex>
     </>
   );
-
-  /*
-  return (
-    <>
-      <Heading
-        as="h1"
-        size="3xl"
-        width="100%"
-        justifyContent="center"
-        display={"flex"}
-        paddingTop={"2%"}
-      >
-        {nationsInfo[nation as keyof typeof nationsInfo].name}
-      </Heading>
-      <CardDetailsExpansionWithFilter
-        card={selectedCard}
-        filterCards={testingCards}
-        onSelectCard={handleSelectCard}
-      />
-    </>
-  );
-  */
 };
 
 export default NationsInfoPage;

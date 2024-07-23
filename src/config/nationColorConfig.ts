@@ -12,15 +12,9 @@ export interface nationPageConfig {
     landmarks: LandmarkCardProps[];
 }
 
-const testLandmark = {
-    heading: "name",
-    text: "The Kingdom of Eldoria is a realm of ancient magic and noble knights. Its lush forests and towering castles are home to many legendary creatures and brave adventurers.",
-    imageUrl: '/images/worldmap.png'
-  };
-
 export const earisEmpirePageCofig: nationPageConfig = {
     name: 'Holy Earis Empire',
-    backgroundImage: '/images/earisbackground.png',
+    backgroundImage: './images/earisbackground.png',
     heroText: 'The Goddess\' Light Will Protect Us On Our Holy Conquest',
     color: 'rgb(205, 257, 246)',
     backgroundColorStatic: 'rgb(120, 97, 85)',

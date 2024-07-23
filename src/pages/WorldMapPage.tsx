@@ -13,7 +13,7 @@ export const WorldMap: React.FC = () => {
   ];
 
   // URL to the image
-  const imageUrl = `${process.env.PUBLIC_URL}/images/worldmap.png`;
+  const imageUrl = `./images/worldmap.png`;
   const navBarProps: NavBarProps = {
     textColor: 'white'
   }

@@ -12,7 +12,7 @@ import { earisEmpirePageCofig } from "./config/nationColorConfig";
 import customTheme from "./theme";
 
 export const App = () => (
-  <ChakraProvider theme={customTheme}>
+  <ChakraProvider theme={theme}>
     <Routes>
       <Route path="/dndworldwebsite" element={<HomePage />} />
       <Route path="/dndworldwebsite/articles" element={<ArticlesPage />} />
