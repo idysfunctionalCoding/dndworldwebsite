@@ -14,7 +14,7 @@ import customTheme from "./theme";
 export const App = () => (
   <ChakraProvider theme={customTheme}>
     <Routes>
-      <Route path="/dndworldwebsite" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/dndworldwebsite/nations/articles" element={<ArticlesPage />} />
       <Route path="/dndworldwebsite/worldmap" element={<WorldMap />} />
       <Route path='/dndworldwebsite/nations/holyearisampire' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
