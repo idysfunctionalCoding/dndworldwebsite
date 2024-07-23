@@ -18,7 +18,7 @@ const HomePage = () => {
 
   return (
     <Box
-      backgroundImage={`url(./dndworldwebsite/images/landingPageBackground.png)`}
+      backgroundImage={`url(./images/landingPageBackground.png)`}
       backgroundSize={"cover"}
       w={"full"}
       h={"100vh"}
