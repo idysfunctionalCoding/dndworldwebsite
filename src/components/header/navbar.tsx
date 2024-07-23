@@ -33,7 +33,7 @@ export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
                 <MenuItem>History</MenuItem>
                 <MenuItem>Geography</MenuItem>
                 <MenuItem>Culture</MenuItem>
-                <Link to="nations">
+                <Link to="/dndworldwebsite/nations">
                 <MenuItem>Nations</MenuItem>
                 </Link>
               </MenuList>
@@ -66,7 +66,7 @@ export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
                 Maps
               </MenuButton>
               <MenuList zIndex={1000}>
-                <Link to="worldmap">
+                <Link to="/dndworldwebsite/worldmap">
                 <MenuItem>World Map</MenuItem>
                 </Link>
                 <MenuItem>City Maps</MenuItem>
