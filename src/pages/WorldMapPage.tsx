@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { CRS } from "leaflet";
 import { Heading, Flex, VStack } from "@chakra-ui/react";
 import { NavBar, NavBarProps } from "../components/header/navbar";
+import worldMap from '../assets/worldmap.png'
 
 export const WorldMap: React.FC = () => {
   // Set the bounds for the image
@@ -13,7 +14,6 @@ export const WorldMap: React.FC = () => {
   ];
 
   // URL to the image
-  const imageUrl = `./images/worldmap.png`;
   const navBarProps: NavBarProps = {
     textColor: 'white'
   }
@@ -34,7 +34,7 @@ export const WorldMap: React.FC = () => {
           maxBoundsViscosity={1.0}
           zoomControl={false}
         >
-          <ImageOverlay url={imageUrl} bounds={bounds} />
+          <ImageOverlay url={worldMap} bounds={bounds} />
         </MapContainer>
       </Flex>
     </VStack>

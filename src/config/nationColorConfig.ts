@@ -1,5 +1,6 @@
 import { LandmarkCardProps } from "../components/landmarkcards/landmarkCard";
 import { earisCulturalSection } from "./culturalCardConfig";
+import earisBackground from '../assets/earisbackground.png'
 
 export interface nationPageConfig {
     name: string;
@@ -14,7 +15,7 @@ export interface nationPageConfig {
 
 export const earisEmpirePageCofig: nationPageConfig = {
     name: 'Holy Earis Empire',
-    backgroundImage: './images/earisbackground.png',
+    backgroundImage: earisBackground,
     heroText: 'The Goddess\' Light Will Protect Us On Our Holy Conquest',
     color: 'rgb(205, 257, 246)',
     backgroundColorStatic: 'rgb(120, 97, 85)',

@@ -8,6 +8,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { NavBar, NavBarProps } from "../components/header/navbar";
+import homePageBackground from '../assets/landingPageBackground.png'
 
 const HomePage = () => {
 
@@ -18,7 +19,7 @@ const HomePage = () => {
 
   return (
     <Box
-      backgroundImage={`url(./images/landingPageBackground.png)`}
+      backgroundImage={homePageBackground}
       backgroundSize={"cover"}
       w={"full"}
       h={"100vh"}
