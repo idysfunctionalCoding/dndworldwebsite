@@ -12,13 +12,13 @@ import { earisEmpirePageCofig } from "./config/nationColorConfig";
 import customTheme from "./theme";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
+  <ChakraProvider theme={customTheme}>
     <Routes>
       <Route path="/dndworldwebsite" element={<HomePage />} />
-      <Route path="/dndworldwebsite/articles" element={<ArticlesPage />} />
-      <Route path="/dndworldwebsite/worldmap" element={<WorldMap />} />
-      <Route path='/dndworldwebsite/nations/holyearisampire' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
-      <Route path='/dndworldwebsite/nations' element={<NationsInfoPage /> } />
+      <Route path="/articles" element={<ArticlesPage />} />
+      <Route path="/worldmap" element={<WorldMap />} />
+      <Route path='/nations/holyearisampire' element={<IndividualNationPage {...earisEmpirePageCofig}/> } />
+      <Route path='/nations' element={<NationsInfoPage /> } />
     </Routes>
   </ChakraProvider>
 );
