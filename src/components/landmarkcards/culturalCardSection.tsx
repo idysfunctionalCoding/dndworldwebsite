@@ -1,18 +1,18 @@
 import { Box, Flex, Heading, Grid } from "@chakra-ui/react"
 import { LandmarkCard, LandmarkCardProps } from "./landmarkCard"
 
-export interface LandmarkCardSectionProps {
+export interface HighlightCardSectionProps {
     textColor: string;
     columnAmount: number;
     rowAmount: number;
     landmarks: LandmarkCardProps[];
 }
 
-export const LandmarkCardSection: React.FC<LandmarkCardSectionProps> = (props: LandmarkCardSectionProps) => {
+export const HighlightCardSection: React.FC<HighlightCardSectionProps> = (props: HighlightCardSectionProps) => {
     return (
         <Box pt={"3vh"}>
           <Flex justifyContent={"center"} align={"center"}>
-            <Heading color={props.textColor}>Signifigant Landmarks</Heading>
+            <Heading color={props.textColor}>Signifigant Cultural Features</Heading>
           </Flex>
           <Grid
             templateColumns={`repeat(${props.columnAmount}, 1fr)`}

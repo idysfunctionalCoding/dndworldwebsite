@@ -7,9 +7,14 @@ import {
   VStack,
   Box,
 } from "@chakra-ui/react";
-import { NavBar } from "../components/header/navbar";
+import { NavBar, NavBarProps } from "../components/header/navbar";
 
 const HomePage = () => {
+
+  const navBarProps: NavBarProps = {
+    textColor: "rgb(159, 150, 170)"
+
+  }
 
   return (
     <Box
@@ -18,7 +23,7 @@ const HomePage = () => {
       w={"full"}
       h={"100vh"}
     >
-      <NavBar />
+      <NavBar {...navBarProps}/>
       <Flex justifyContent={'center'} alignItems={'center'} alignContent={'center'} h={'93vh'}>
         <VStack
           w={"full"}

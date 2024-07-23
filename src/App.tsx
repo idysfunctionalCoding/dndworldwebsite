@@ -9,9 +9,10 @@ import NationsInfoPage from "./pages/NationPage";
 import WorldMap from "./pages/WorldMapPage";
 import IndividualNationPage from "./pages/NationIndividualPage";
 import { earisEmpirePageCofig } from "./config/nationColorConfig";
+import customTheme from "./theme";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
+  <ChakraProvider theme={customTheme}>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/articles" element={<ArticlesPage />} />

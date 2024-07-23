@@ -9,17 +9,19 @@ import {
   TabPanel,
   Tabs,
   Divider,
+  Stack,
+  useColorModeValue
 } from "@chakra-ui/react";
-import { NavBar } from "../components/header/navbar";
+import { NavBar, NavBarProps } from "../components/header/navbar";
 import { nationPageConfig } from "../config/nationColorConfig";
 import {
   HeroSectionProps,
   HeroSectionText,
 } from "../components/herosection/herosectiontext";
 import {
-  LandmarkCardSection,
-  LandmarkCardSectionProps,
-} from "../components/landmarkcards/landmarkCardSection";
+  HighlightCardSection,
+  HighlightCardSectionProps,
+} from "../components/landmarkcards/culturalCardSection";
 
 const IndividualNationPage = (props: nationPageConfig) => {
   const heroSectionProps: HeroSectionProps = {
@@ -28,7 +30,7 @@ const IndividualNationPage = (props: nationPageConfig) => {
     textColor: props.textColor,
   };
 
-  const landmarkSectionProps: LandmarkCardSectionProps = {
+  const landmarkSectionProps: HighlightCardSectionProps = {
     textColor: props.textColor,
     landmarks: props.landmarks,
     columnAmount: Math.min(4, props.landmarks.length),
@@ -37,6 +39,10 @@ const IndividualNationPage = (props: nationPageConfig) => {
         ? Math.floor(props.landmarks.length / 4)
         : Math.floor(props.landmarks.length / 4) + 1,
   };
+
+  const navBarProps: NavBarProps = {
+    textColor: props.textColor
+  }
 
   return (
     <>
@@ -48,13 +54,13 @@ const IndividualNationPage = (props: nationPageConfig) => {
         backgroundSize="cover"
         backgroundRepeat={"no-repeat"}
       >
-        <NavBar />
+        <NavBar {...navBarProps} />
         <HeroSectionText {...heroSectionProps} />
         <Flex justifyContent={"center"}>
           <Divider size="xl" width={"85%"} border={"1px"}></Divider>
         </Flex>
-        <LandmarkCardSection {...landmarkSectionProps} />
-        <Flex justifyContent={"center"} mt={'5vh'}>
+        <HighlightCardSection {...landmarkSectionProps} />
+        <Flex justifyContent={"center"} mt={"5vh"}>
           <Divider size="xl" width={"85%"} border={"1px"}></Divider>
         </Flex>
         <Flex w={"100%"} margin={"auto"} pt={"5vh"}>

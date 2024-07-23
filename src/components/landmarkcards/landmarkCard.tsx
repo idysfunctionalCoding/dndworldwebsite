@@ -3,6 +3,7 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 export interface LandmarkCardProps {
   heading: string;
   text: string;
+  imageUrl: string;
 }
 
 const CustomCard = (props: LandmarkCardProps) => {
@@ -14,6 +15,7 @@ const CustomCard = (props: LandmarkCardProps) => {
       fontFamily="'MedievalSharp', cursive"
       width="15vw"
       height="40vh"
+      _hover={{ transform: "scale(1.2)", transitionDuration: "500ms" }}
     >
       <Box
         position="absolute"
@@ -21,7 +23,7 @@ const CustomCard = (props: LandmarkCardProps) => {
         left="0"
         right="0"
         bottom="0"
-        bgImage="url('/images/worldmap.png')"
+        bgImage={props.imageUrl}
         bgSize="cover"
         bgPosition="center"
         zIndex="1"
@@ -37,10 +39,10 @@ const CustomCard = (props: LandmarkCardProps) => {
         color="white"
         zIndex="3"
       >
-        <Heading as="h2" size="lg" mb={2} color={"black"}>
+        <Heading as="h2" size="lg" mb={2} color={"white"}>
           {props.heading}
         </Heading>
-        <Text>
+        <Text fontSize={'sm'}>
           {props.text}
         </Text>
       </Box>
@@ -55,7 +57,6 @@ export const LandmarkCard = (props: LandmarkCardProps) => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      _hover={{ transform: "scale(1.2)", transitionDuration: "500ms" }}
     >
       <CustomCard {...props} />
     </Box>

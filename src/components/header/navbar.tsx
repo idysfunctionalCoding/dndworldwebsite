@@ -11,7 +11,11 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-export const NavBar: React.FC = () => {
+export interface NavBarProps {
+  textColor: string;
+}
+
+export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
   return (
     <Box px={4} justifyContent={"center"} h={"7vh"} color={"white"} zIndex={1000}>
       <Flex h={16} alignItems="center" justifyContent="center">
@@ -22,7 +26,7 @@ export const NavBar: React.FC = () => {
             display={{ base: "none", md: "flex" }}
           >
             <Menu>
-              <MenuButton as={Button} variant={"ghost"} color={"rgb(159, 150, 170)"}>
+              <MenuButton as={Button} variant={"ghost"} color={props.textColor}>
                 World
               </MenuButton>
               <MenuList zIndex={1000}>
@@ -36,7 +40,7 @@ export const NavBar: React.FC = () => {
             </Menu>
 
             <Menu>
-              <MenuButton as={Button} variant={"ghost"} color={"rgb(159, 150, 170)"}>
+              <MenuButton as={Button} variant={"ghost"} color={props.textColor}>
                 Organizations
               </MenuButton>
               <MenuList zIndex={1000}>
@@ -47,7 +51,7 @@ export const NavBar: React.FC = () => {
             </Menu>
 
             <Menu>
-              <MenuButton as={Button} variant={"ghost"} color={"rgb(159, 150, 170)"}>
+              <MenuButton as={Button} variant={"ghost"} color={props.textColor}>
                 Documents
               </MenuButton>
               <MenuList zIndex={1000}>
@@ -58,7 +62,7 @@ export const NavBar: React.FC = () => {
             </Menu>
 
             <Menu>
-              <MenuButton as={Button} variant={"ghost"} color={"rgb(159, 150, 170)"}>
+              <MenuButton as={Button} variant={"ghost"} color={props.textColor}>
                 Maps
               </MenuButton>
               <MenuList zIndex={1000}>

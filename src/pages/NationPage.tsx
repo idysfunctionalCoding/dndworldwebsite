@@ -11,13 +11,18 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { nationCards } from "../config/nationCardConfig";
-import { NavBar } from "../components/header/navbar";
+import { NavBar, NavBarProps } from "../components/header/navbar";
 import { Link } from "react-router-dom";
 
 const NationsInfoPage = () => {
+
+  const navBarProps: NavBarProps = {
+    textColor: "rgb(159, 150, 170)"
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar {...navBarProps} />
       <Flex w={"90%"} margin={"auto"}>
         <Box p={5} margin="auto" borderRadius="md" boxShadow="md" w={"100%"}>
           <Heading as="h1" size="xl" mb={5} textAlign="center">

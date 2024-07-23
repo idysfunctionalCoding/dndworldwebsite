@@ -3,7 +3,7 @@ import { MapContainer, ImageOverlay } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { CRS } from "leaflet";
 import { Heading, Flex, VStack } from "@chakra-ui/react";
-import { NavBar } from "../components/header/navbar";
+import { NavBar, NavBarProps } from "../components/header/navbar";
 
 export const WorldMap: React.FC = () => {
   // Set the bounds for the image
@@ -14,10 +14,13 @@ export const WorldMap: React.FC = () => {
 
   // URL to the image
   const imageUrl = `${process.env.PUBLIC_URL}/images/worldmap.png`;
+  const navBarProps: NavBarProps = {
+    textColor: 'white'
+  }
 
   return (
     <>
-    <NavBar />
+    <NavBar {...navBarProps}/>
     <VStack>
       <Heading as="h1" size="xl" mb={5} textAlign="center">
         Interactive World Map!
