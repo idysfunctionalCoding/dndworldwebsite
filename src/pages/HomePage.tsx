@@ -39,8 +39,7 @@ const HomePage = () => {
               lineHeight={1.2}
               fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
             >
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              eiusmod tempor
+              Welcome to my DM website which contains info for a fantasy world
             </Text>
             <Stack direction={"row"}>
               <Button
@@ -49,7 +48,7 @@ const HomePage = () => {
                 color={"white"}
                 _hover={{ bg: "blue.500" }}
               >
-                Show me more
+                Me no work
               </Button>
               <Button
                 bg={"whiteAlpha.300"}
@@ -57,7 +56,7 @@ const HomePage = () => {
                 color={"white"}
                 _hover={{ bg: "whiteAlpha.500" }}
               >
-                Show me more
+                Me no work
               </Button>
             </Stack>
           </Stack>
