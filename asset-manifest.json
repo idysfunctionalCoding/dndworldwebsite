@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dndworldwebsite/static/css/main.b3b524c0.css",
-    "main.js": "/dndworldwebsite/static/js/main.97d74a89.js",
+    "main.js": "/dndworldwebsite/static/js/main.24f9d01a.js",
     "static/js/453.43880611.chunk.js": "/dndworldwebsite/static/js/453.43880611.chunk.js",
     "static/media/earisbackground.png": "/dndworldwebsite/static/media/earisbackground.97b6d9d4b545485c2370.png",
     "static/media/worldmap.png": "/dndworldwebsite/static/media/worldmap.902771ac52143751f383.png",
@@ -37,11 +37,11 @@
     "static/media/open-sans-greek-ext-400-normal.woff": "/dndworldwebsite/static/media/open-sans-greek-ext-400-normal.3616aaac04f18fe72867.woff",
     "index.html": "/dndworldwebsite/index.html",
     "main.b3b524c0.css.map": "/dndworldwebsite/static/css/main.b3b524c0.css.map",
-    "main.97d74a89.js.map": "/dndworldwebsite/static/js/main.97d74a89.js.map",
+    "main.24f9d01a.js.map": "/dndworldwebsite/static/js/main.24f9d01a.js.map",
     "453.43880611.chunk.js.map": "/dndworldwebsite/static/js/453.43880611.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3b524c0.css",
-    "static/js/main.97d74a89.js"
+    "static/js/main.24f9d01a.js"
   ]
 }
