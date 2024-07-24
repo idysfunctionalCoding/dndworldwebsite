@@ -10,15 +10,14 @@ import {
   Stack,
   VStack,
 } from "@chakra-ui/react";
-import { nationCards } from "../config/nationCardConfig";
+import { nationCards } from "../config/nationInfoConfigs/nationCardConfig";
 import { NavBar, NavBarProps } from "../components/header/navbar";
 import { Link } from "react-router-dom";
 
 const NationsInfoPage = () => {
-
   const navBarProps: NavBarProps = {
-    textColor: "rgb(159, 150, 170)"
-  }
+    textColor: "rgb(159, 150, 170)",
+  };
 
   return (
     <>

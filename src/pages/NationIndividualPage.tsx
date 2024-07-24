@@ -10,10 +10,10 @@ import {
   Tabs,
   Divider,
   Stack,
-  useColorModeValue
+  Card,
 } from "@chakra-ui/react";
 import { NavBar, NavBarProps } from "../components/header/navbar";
-import { nationPageConfig } from "../config/nationColorConfig";
+import { NationPageConfig } from "../config/nationInfoConfigs/nationPageConfig";
 import {
   HeroSectionProps,
   HeroSectionText,
@@ -22,8 +22,9 @@ import {
   HighlightCardSection,
   HighlightCardSectionProps,
 } from "../components/landmarkcards/culturalCardSection";
+import OnPagePersonSection from "../components/personinformation/personinformationsection";
 
-const IndividualNationPage = (props: nationPageConfig) => {
+const IndividualNationPage = (props: NationPageConfig) => {
   const heroSectionProps: HeroSectionProps = {
     titleText: props.name,
     subtitleText: props.heroText,
@@ -41,8 +42,8 @@ const IndividualNationPage = (props: nationPageConfig) => {
   };
 
   const navBarProps: NavBarProps = {
-    textColor: props.textColor
-  }
+    textColor: props.textColor,
+  };
 
   return (
     <>
@@ -53,6 +54,8 @@ const IndividualNationPage = (props: nationPageConfig) => {
         backgroundPosition={"center"}
         backgroundSize="cover"
         backgroundRepeat={"no-repeat"}
+        backgroundAttachment={"fixed"}
+        style={{ backgroundOrigin: "border-box" }}
       >
         <NavBar {...navBarProps} />
         <HeroSectionText {...heroSectionProps} />
@@ -111,13 +114,26 @@ const IndividualNationPage = (props: nationPageConfig) => {
                   </Text>
                 </TabPanel>
                 <TabPanel>
-                  <Heading as="h2" size="lg" mb={3}>
-                    Politics
-                  </Heading>
-                  <Text>
-                    Information about the nation's political system, key figures
-                    in the government, and current political climate.
-                  </Text>
+                  <Card borderRadius={"3xl"}>
+                    <Box p={8} rounded="md" shadow="md" mx="auto">
+                      <Stack spacing={6}>
+                        <Text fontSize="lg">
+                          The Holy Earis Empire is a theocratic monarchy, where
+                          the Emperor or Empress is both the secular ruler and
+                          the high priest of the Church of Earis,
+                        </Text>
+                        <Divider />
+                        <Flex w={"100%"} justify={"center"}>
+                          <Heading as="h1" size={"2xl"}>
+                            Key Figures
+                          </Heading>
+                        </Flex>
+                        {props.people.political?.map((person) => (
+                          <OnPagePersonSection {...person} />
+                        ))}
+                      </Stack>
+                    </Box>
+                  </Card>
                 </TabPanel>
               </TabPanels>
             </Tabs>
