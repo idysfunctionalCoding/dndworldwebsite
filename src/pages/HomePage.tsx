@@ -8,14 +8,12 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { NavBar, NavBarProps } from "../components/header/navbar";
-import homePageBackground from '../assets/landingPageBackground.png'
+import homePageBackground from "../assets/landingPageBackground.png";
 
 const HomePage = () => {
-
   const navBarProps: NavBarProps = {
-    textColor: "rgb(159, 150, 170)"
-
-  }
+    textColor: "rgb(159, 150, 170)",
+  };
 
   return (
     <Box
@@ -24,12 +22,17 @@ const HomePage = () => {
       w={"full"}
       h={"100vh"}
     >
-      <NavBar {...navBarProps}/>
-      <Flex justifyContent={'center'} alignItems={'center'} alignContent={'center'} h={'93vh'}>
+      <NavBar {...navBarProps} />
+      <Flex
+        justifyContent={"center"}
+        alignItems={"center"}
+        alignContent={"center"}
+        h={"93vh"}
+      >
         <VStack
           w={"full"}
           justify={"center"}
-          align={'center'}
+          align={"center"}
           px={useBreakpointValue({ base: 4, md: 8 })}
         >
           <Stack maxW={"2xl"} spacing={6}>

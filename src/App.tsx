@@ -2,12 +2,12 @@ import { ChakraProvider } from "@chakra-ui/react";
 import HomePage from "./pages/HomePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import { Route, Routes } from "react-router";
-import NationsInfoPage from "./pages/NationPage";
+import ClickableCardInfoPage from "./pages/ClickableCardPage";
 import WorldMap from "./pages/WorldMapPage";
 import IndividualNationPage from "./pages/NationIndividualPage";
-import { earisEmpirePageCofig } from "./config/nationInfoConfigs/nationPageConfig";
 import customTheme from "./theme";
 import WorldHistoryPage from "./pages/WorldHistoryPage";
+import { nationCards } from "./config/nationInfoConfigs/clickableCardInfoConfig";
 
 const events = [
   {
@@ -77,6 +77,11 @@ const timeline = {
   events: events,
 };
 
+const nationCardProps = {
+  cards: nationCards,
+  pageTitle: "All Nations",
+};
+
 export const App = () => (
   <ChakraProvider theme={customTheme}>
     <Routes>
@@ -91,10 +96,13 @@ export const App = () => (
       />
       <Route path="/dndworldwebsite/worldmap" element={<WorldMap />} />
       <Route
-        path="/dndworldwebsite/nations/holyearisampire"
-        element={<IndividualNationPage {...earisEmpirePageCofig} />}
+        path="/dndworldwebsite/nations/:nationName"
+        element={<IndividualNationPage />}
       />
-      <Route path="/dndworldwebsite/nations" element={<NationsInfoPage />} />
+      <Route
+        path="/dndworldwebsite/nations"
+        element={<ClickableCardInfoPage {...nationCardProps} />}
+      />
     </Routes>
   </ChakraProvider>
 );

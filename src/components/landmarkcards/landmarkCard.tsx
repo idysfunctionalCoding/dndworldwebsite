@@ -15,7 +15,6 @@ const CustomCard = (props: LandmarkCardProps) => {
       fontFamily="'MedievalSharp', cursive"
       width="15vw"
       height="40vh"
-      _hover={{ transform: "scale(1.2)", transitionDuration: "500ms" }}
     >
       <Box
         position="absolute"
@@ -42,9 +41,7 @@ const CustomCard = (props: LandmarkCardProps) => {
         <Heading as="h2" size="lg" mb={2} color={"white"}>
           {props.heading}
         </Heading>
-        <Text fontSize={'sm'}>
-          {props.text}
-        </Text>
+        <Text fontSize={"sm"}>{props.text}</Text>
       </Box>
     </Box>
   );
@@ -52,12 +49,7 @@ const CustomCard = (props: LandmarkCardProps) => {
 
 export const LandmarkCard = (props: LandmarkCardProps) => {
   return (
-    <Box
-      p={4}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Box p={4} display="flex" justifyContent="center" alignItems="center">
       <CustomCard {...props} />
     </Box>
   );

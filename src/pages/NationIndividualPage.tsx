@@ -11,6 +11,7 @@ import {
   Divider,
   Stack,
   Card,
+  Grid,
 } from "@chakra-ui/react";
 import { NavBar, NavBarProps } from "../components/header/navbar";
 import { NationPageConfig } from "../config/nationInfoConfigs/nationPageConfig";
@@ -23,34 +24,45 @@ import {
   HighlightCardSectionProps,
 } from "../components/landmarkcards/culturalCardSection";
 import OnPagePersonSection from "../components/personinformation/personinformationsection";
+import { individualNationConfigs } from "../config/nationInfoConfigs/nationPageConfig";
+import { useParams } from "react-router-dom";
 
-const IndividualNationPage = (props: NationPageConfig) => {
+const IndividualNationPage = () => {
+  const { nationName } = useParams();
+  const nationConfig: NationPageConfig =
+    individualNationConfigs[nationName as keyof typeof individualNationConfigs];
   const heroSectionProps: HeroSectionProps = {
-    titleText: props.name,
-    subtitleText: props.heroText,
-    textColor: props.textColor,
+    titleText: nationConfig.name,
+    subtitleText: nationConfig.heroText,
+    textColor: nationConfig.textColor,
   };
 
   const landmarkSectionProps: HighlightCardSectionProps = {
-    textColor: props.textColor,
-    landmarks: props.landmarks,
-    columnAmount: Math.min(4, props.landmarks.length),
+    textColor: nationConfig.textColor,
+    landmarks: nationConfig.landmarks,
+    columnAmount: Math.min(4, nationConfig.landmarks.length),
     rowAmount:
-      props.landmarks.length % 4 === 0
-        ? Math.floor(props.landmarks.length / 4)
-        : Math.floor(props.landmarks.length / 4) + 1,
+      nationConfig.landmarks.length % 4 === 0
+        ? Math.floor(nationConfig.landmarks.length / 4)
+        : Math.floor(nationConfig.landmarks.length / 4) + 1,
   };
 
   const navBarProps: NavBarProps = {
-    textColor: props.textColor,
+    textColor: nationConfig.textColor,
   };
+
+  let politicalPeopleRowAmount = 0;
+  if (nationConfig.people.political !== undefined) {
+    politicalPeopleRowAmount =
+      nationConfig.people.political.length % 2 === 0
+        ? Math.floor(nationConfig.landmarks.length / 2)
+        : Math.floor(nationConfig.landmarks.length / 2) + 1;
+  }
 
   return (
     <>
       <Box
-        backgroundImage={props.backgroundImage}
-        width={"100%"}
-        height={"100%"}
+        backgroundImage={nationConfig.backgroundImage}
         backgroundPosition={"center"}
         backgroundSize="cover"
         backgroundRepeat={"no-repeat"}
@@ -76,7 +88,7 @@ const IndividualNationPage = (props: NationPageConfig) => {
                 <Tab>Geography</Tab>
                 <Tab>Politics</Tab>
               </TabList>
-              <TabPanels color={"black"}>
+              <TabPanels color={nationConfig.textColor}>
                 <TabPanel>
                   <Heading as="h2" size="lg" mb={3}>
                     Overview
@@ -128,9 +140,15 @@ const IndividualNationPage = (props: NationPageConfig) => {
                             Key Figures
                           </Heading>
                         </Flex>
-                        {props.people.political?.map((person) => (
-                          <OnPagePersonSection {...person} />
-                        ))}
+                        <Grid
+                          templateColumns={`repeat(2, 1fr)`}
+                          templateRows={`repeat(${politicalPeopleRowAmount}, 1fr)`}
+                          gap={4}
+                        >
+                          {nationConfig.people.political?.map((person) => (
+                            <OnPagePersonSection {...person} />
+                          ))}
+                        </Grid>
                       </Stack>
                     </Box>
                   </Card>
