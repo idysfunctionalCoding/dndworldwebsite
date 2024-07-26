@@ -1,26 +1,35 @@
 {
   "files": {
     "main.css": "/dndworldwebsite/static/css/main.b3b524c0.css",
-    "main.js": "/dndworldwebsite/static/js/main.6b6712a3.js",
+    "main.js": "/dndworldwebsite/static/js/main.3f031f5c.js",
     "static/js/453.43880611.chunk.js": "/dndworldwebsite/static/js/453.43880611.chunk.js",
     "static/media/earisbackground.png": "/dndworldwebsite/static/media/earisbackground.7b038777158be2ccb267.png",
     "static/media/xaendriadbackground.png": "/dndworldwebsite/static/media/xaendriadbackground.7bc51d797d8e531aa353.png",
     "static/media/worldmap.png": "/dndworldwebsite/static/media/worldmap.902771ac52143751f383.png",
     "static/media/landingPageBackground.png": "/dndworldwebsite/static/media/landingPageBackground.bd01e2e87ad74f5634d6.png",
     "static/media/goddessoflightstatue.png": "/dndworldwebsite/static/media/goddessoflightstatue.6a06bb749622256c5d0a.png",
+    "static/media/dragonrider.png": "/dndworldwebsite/static/media/dragonrider.bed5c477c1b10952f331.png",
     "static/media/festivaloflight.png": "/dndworldwebsite/static/media/festivaloflight.469839bda865777fb2ba.png",
     "static/media/extravagentart.png": "/dndworldwebsite/static/media/extravagentart.2d3b8b2e9772e29ddd35.png",
     "static/media/luminousgrasslands.png": "/dndworldwebsite/static/media/luminousgrasslands.5b0ce746c5d2c1fe23b8.png",
+    "static/media/mercenary.png": "/dndworldwebsite/static/media/mercenary.e315c4d0dac87e6cde28.png",
+    "static/media/trialbycombat.png": "/dndworldwebsite/static/media/trialbycombat.90d8c6c65b6fb0313954.png",
+    "static/media/dragonsmaw.png": "/dndworldwebsite/static/media/dragonsmaw.68be386162cc7f6341d1.png",
     "static/media/griffonemblem.png": "/dndworldwebsite/static/media/griffonemblem.f6ba763a2437c7f32884.png",
     "static/media/dragonswordemblem.png": "/dndworldwebsite/static/media/dragonswordemblem.fb5845fd1b468b299e0c.png",
     "static/media/elarafenwick.png": "/dndworldwebsite/static/media/elarafenwick.a915abbe0450781b0319.png",
+    "static/media/vaelinthestormborn.png": "/dndworldwebsite/static/media/vaelinthestormborn.0f8deb52a8341a696eab.png",
+    "static/media/israflameheart.png": "/dndworldwebsite/static/media/israflameheart.5a6fd4c7f720475c9f2a.png",
     "static/media/empressseraphinaaurelia.png": "/dndworldwebsite/static/media/empressseraphinaaurelia.1f77b0b239cc1716b83b.png",
     "static/media/sistermariellethorne.png": "/dndworldwebsite/static/media/sistermariellethorne.ceb5852515e9e561b2ff.png",
+    "static/media/thalorinfiretongue.png": "/dndworldwebsite/static/media/thalorinfiretongue.c2a336f52430ec6e8e70.png",
     "static/media/generalcassianvaltor.png": "/dndworldwebsite/static/media/generalcassianvaltor.1977ab06c6443011e294.png",
     "static/media/luciusveridian.png": "/dndworldwebsite/static/media/luciusveridian.41094475e4bbe586441d.png",
+    "static/media/lyrastarseer.png": "/dndworldwebsite/static/media/lyrastarseer.0c406b3c63bd39c82d54.png",
     "static/media/theobaldmarcellus.png": "/dndworldwebsite/static/media/theobaldmarcellus.86430dfcf6dfc5bd0de7.png",
     "static/media/birdemblem.png": "/dndworldwebsite/static/media/birdemblem.2daa0579fb2e6d637351.png",
     "static/media/shieldemblem.png": "/dndworldwebsite/static/media/shieldemblem.8c934adf64e4ba858e08.png",
+    "static/media/tharokironclaw.png": "/dndworldwebsite/static/media/tharokironclaw.65173c082b15a90b693a.png",
     "static/media/snakeeemblem.png": "/dndworldwebsite/static/media/snakeeemblem.1b1893e9c211c88cbf6c.png",
     "static/media/open-sans-latin-400-normal.woff2": "/dndworldwebsite/static/media/open-sans-latin-400-normal.feb0d8644aca3df9fabf.woff2",
     "static/media/open-sans-cyrillic-ext-400-normal.woff2": "/dndworldwebsite/static/media/open-sans-cyrillic-ext-400-normal.36a8d1fd05dda56813b9.woff2",
@@ -44,11 +53,11 @@
     "static/media/open-sans-greek-ext-400-normal.woff": "/dndworldwebsite/static/media/open-sans-greek-ext-400-normal.3616aaac04f18fe72867.woff",
     "index.html": "/dndworldwebsite/index.html",
     "main.b3b524c0.css.map": "/dndworldwebsite/static/css/main.b3b524c0.css.map",
-    "main.6b6712a3.js.map": "/dndworldwebsite/static/js/main.6b6712a3.js.map",
+    "main.3f031f5c.js.map": "/dndworldwebsite/static/js/main.3f031f5c.js.map",
     "453.43880611.chunk.js.map": "/dndworldwebsite/static/js/453.43880611.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3b524c0.css",
-    "static/js/main.6b6712a3.js"
+    "static/js/main.3f031f5c.js"
   ]
 }
