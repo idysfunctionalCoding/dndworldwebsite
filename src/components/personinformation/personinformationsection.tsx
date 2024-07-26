@@ -29,7 +29,6 @@ const OnPagePersonSection: React.FC<PeopleInfo> = (props: PeopleInfo) => {
           <Text fontSize="md">{props.descriptionOfPerson}</Text>
         </VStack>
       </Flex>
-      <Divider />
     </Box>
   );
 };

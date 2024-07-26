@@ -82,57 +82,115 @@ const IndividualNationPage = () => {
           <Box margin="auto" borderRadius="md" boxShadow="md" w={"80%"}>
             <Tabs variant="soft-rounded" colorScheme="cyan">
               <TabList mb={5} justifyContent="center" color={"black"}>
-                <Tab color={"black"}>Overview</Tab>
-                <Tab>History</Tab>
-                <Tab>Culture</Tab>
-                <Tab>Geography</Tab>
-                <Tab>Politics</Tab>
+                <Tab color={nationConfig.textColor}>Overview</Tab>
+                <Tab color={nationConfig.textColor}>History</Tab>
+                <Tab color={nationConfig.textColor}>Culture</Tab>
+                <Tab color={nationConfig.textColor}>Geography</Tab>
+                <Tab color={nationConfig.textColor}>Politics</Tab>
               </TabList>
               <TabPanels color={nationConfig.textColor}>
                 <TabPanel>
-                  <Heading as="h2" size="lg" mb={3}>
-                    Overview
-                  </Heading>
-                  <Text>
-                    Brief description of the nation. Include general information
-                    that gives an idea of what the nation is about.
-                  </Text>
-                </TabPanel>
-                <TabPanel>
-                  <Heading as="h2" size="lg" mb={3}>
-                    History
-                  </Heading>
-                  <Text>
-                    Detailed history of the nation, including important events,
-                    dates, and figures that shaped its development.
-                  </Text>
-                </TabPanel>
-                <TabPanel>
-                  <Heading as="h2" size="lg" mb={3}>
-                    Culture
-                  </Heading>
-                  <Text>
-                    Description of the nation's culture, including customs,
-                    traditions, and notable aspects of daily life.
-                  </Text>
-                </TabPanel>
-                <TabPanel>
-                  <Heading as="h2" size="lg" mb={3}>
-                    Geography
-                  </Heading>
-                  <Text>
-                    Overview of the nation's geography, including important
-                    landmarks, climate, and natural resources.
-                  </Text>
+                  <Card borderRadius={"3xl"}>
+                    <Box p={8} rounded="md" shadow="md" mx="auto">
+                      <Stack spacing={6}>
+                        <Heading margin={"auto"}>Overview Information</Heading>
+                        <Divider />
+                        <Stack pl={5} fontSize={"xl"}>
+                          <Text>
+                            <strong>Government Type: </strong>
+                            {nationConfig.sectionText?.overview?.governmentType}
+                          </Text>
+                          <Text>
+                            <strong>Geography: </strong>
+                            {nationConfig.sectionText?.overview?.geography}
+                          </Text>
+                          <Text>
+                            <strong>Climate: </strong>
+                            {nationConfig.sectionText?.overview?.climate}
+                          </Text>
+                          <Text>
+                            <strong>Population: </strong>~
+                            {nationConfig.sectionText?.overview?.population}
+                          </Text>
+                          <Text>
+                            <strong>Major Gods: </strong>
+                            {nationConfig.sectionText?.overview?.governmentType
+                              .length === 0
+                              ? "None"
+                              : nationConfig.sectionText?.overview?.majorGods.join(
+                                  ","
+                                )}
+                          </Text>
+                        </Stack>
+                        <Divider />
+                        <Text fontSize="lg" p={5} whiteSpace="pre-line">
+                          {nationConfig.sectionText?.overview?.paragraph}
+                        </Text>
+                      </Stack>
+                    </Box>
+                  </Card>
                 </TabPanel>
                 <TabPanel>
                   <Card borderRadius={"3xl"}>
                     <Box p={8} rounded="md" shadow="md" mx="auto">
                       <Stack spacing={6}>
-                        <Text fontSize="lg">
-                          The Holy Earis Empire is a theocratic monarchy, where
-                          the Emperor or Empress is both the secular ruler and
-                          the high priest of the Church of Earis,
+                        <Heading margin={"auto"}>History Information</Heading>
+                        <Divider />
+                        <Text fontSize="lg" p={5} whiteSpace="pre-line">
+                          {nationConfig.sectionText?.history?.paragraph}
+                        </Text>
+                        <Divider />
+                        <Heading margin={"auto"} fontSize={"3xl"}>
+                          Major Events
+                        </Heading>
+                        {nationConfig.sectionText?.history?.majorEvents.map(
+                          (entry) => (
+                            <Box pl={5}>
+                              <Heading fontSize={"xl"}>{entry.name}</Heading>
+                              <Text fontSize="lg" pt={2}>
+                                {entry.text}
+                              </Text>
+                              <Divider p={2} />
+                            </Box>
+                          )
+                        )}
+                      </Stack>
+                    </Box>
+                  </Card>
+                </TabPanel>
+                <TabPanel>
+                  <Card borderRadius={"3xl"}>
+                    <Box p={8} rounded="md" shadow="md" mx="auto">
+                      <Stack spacing={6}>
+                        <Heading margin={"auto"}>Cultural Overview</Heading>
+                        <Divider />
+                        <Text fontSize="lg" p={5} whiteSpace="pre-line">
+                          {nationConfig.sectionText?.culture?.paragraph}
+                        </Text>
+                      </Stack>
+                    </Box>
+                  </Card>
+                </TabPanel>
+                <TabPanel>
+                  <Card borderRadius={"3xl"}>
+                    <Box p={8} rounded="md" shadow="md" mx="auto">
+                      <Stack spacing={6}>
+                        <Heading margin={"auto"}>Geographical Overview</Heading>
+                        <Divider />
+                        <Text fontSize="lg" p={5} whiteSpace="pre-line">
+                          {nationConfig.sectionText?.geography?.paragraph}
+                        </Text>
+                      </Stack>
+                    </Box>
+                  </Card>
+                </TabPanel>
+                <TabPanel>
+                  <Card borderRadius={"3xl"}>
+                    <Box p={8} rounded="md" shadow="md" mx="auto">
+                      <Stack spacing={6}>
+                        <Heading margin={"auto"}>Political Overview</Heading>
+                        <Text fontSize="lg" whiteSpace="pre-line">
+                          {nationConfig.sectionText?.political?.paragraph}
                         </Text>
                         <Divider />
                         <Flex w={"100%"} justify={"center"}>

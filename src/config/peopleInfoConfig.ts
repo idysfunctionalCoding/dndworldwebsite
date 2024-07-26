@@ -4,6 +4,11 @@ import diplomatElaraFenwick from "../assets/people/earis/elarafenwick.png";
 import sisterMarielleThorne from "../assets/people/earis/sistermariellethorne.png";
 import grandInquisitorTheobaldMarcellus from "../assets/people/earis/theobaldmarcellus.png";
 import highScholarLuciusVeridian from "../assets/people/earis/luciusveridian.png";
+import IsraFlameheart from "../assets/people/xaendriad/israflameheart.png";
+import LyraStarSeer from "../assets/people/xaendriad/lyrastarseer.png";
+import TharokIronclaw from "../assets/people/xaendriad/tharokironclaw.png";
+import ThalorinFiretongue from "../assets/people/xaendriad/thalorinfiretongue.png";
+import VaelinTheStormborn from "../assets/people/xaendriad/vaelinthestormborn.png";
 
 export interface PeopleInfo {
   imageOfPerson: string;
@@ -62,6 +67,42 @@ const luciusVeridian = {
     "High Scholar Lucius is a leading figure in the Empire’s academic and religious communities. As the head of the prestigious Luminary University, he oversees both religious and secular education. Lucius is a prolific writer and scholar, having authored numerous texts on theology, history, and magic. He advocates for the dissemination of knowledge and the illumination of minds, embodying the Enlightenment ideals of the Empire.",
 };
 
+// xaendriad people
+const vaelinthestormborn = {
+  imageOfPerson: VaelinTheStormborn,
+  nameOfPerson: "Drakar Vaelin the Stormborn",
+  descriptionOfPerson:
+    "A dragonborn of few words he rose to the spot of Drakar when Isra stepped down willingly, he is considered one of the strongest warriors in the world combinded with his bonded blue dragon Stormwing they are a terrifying duo",
+};
+
+const israflameheart = {
+  imageOfPerson: IsraFlameheart,
+  nameOfPerson: "Isra Flameheart",
+  descriptionOfPerson:
+    "After stepping down from the position of Drakar several years ago. Isra became the leader of the Elder Wyrms and is a key military advisor and general consultant in The Draconic Circle",
+};
+
+const thalorinfiretongue = {
+  imageOfPerson: ThalorinFiretongue,
+  nameOfPerson: "Thalorin Firetongue",
+  descriptionOfPerson:
+    "A member of The Draconic Circle as the head dragon priest who oversees communicating with dragons and protecting them.",
+};
+
+const tharokironclaw = {
+  imageOfPerson: TharokIronclaw,
+  nameOfPerson: "Tharok Ironclaw",
+  descriptionOfPerson:
+    "A veteran warrior and the current leader of the largest mercenary group in the Dominion of Xaendriad known as The Scale Swords.",
+};
+
+const lyrastarseer = {
+  imageOfPerson: LyraStarSeer,
+  nameOfPerson: "Lyra Starseer",
+  descriptionOfPerson:
+    "Head of record keeping but is also the leader of the cultural rituals that happen in the Dominion of Xaendriad. She serves as the cultural advisor on The Draconic Circle",
+};
+
 export const earisPeople: NationsPeople = {
   political: [
     seraphinaAurelia,
@@ -70,5 +111,15 @@ export const earisPeople: NationsPeople = {
     marielleThorne,
     theobaldMarcellus,
     luciusVeridian,
+  ],
+};
+
+export const xaendriadPeople: NationsPeople = {
+  political: [
+    vaelinthestormborn,
+    israflameheart,
+    thalorinfiretongue,
+    tharokironclaw,
+    lyrastarseer,
   ],
 };
