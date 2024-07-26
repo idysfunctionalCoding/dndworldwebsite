@@ -31,6 +31,9 @@ const IndividualNationPage = () => {
   const { nationName } = useParams();
   const nationConfig: NationPageConfig =
     individualNationConfigs[nationName as keyof typeof individualNationConfigs];
+  if (nationConfig === undefined) {
+    return <Text> This page has not been implemented yet</Text>;
+  }
   const heroSectionProps: HeroSectionProps = {
     titleText: nationConfig.name,
     subtitleText: nationConfig.heroText,
