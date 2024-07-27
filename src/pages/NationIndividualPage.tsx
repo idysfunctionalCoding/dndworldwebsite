@@ -121,7 +121,7 @@ const IndividualNationPage = () => {
                               .length === 0
                               ? "None"
                               : nationConfig.sectionText?.overview?.majorGods.join(
-                                  ","
+                                  ", "
                                 )}
                           </Text>
                         </Stack>
