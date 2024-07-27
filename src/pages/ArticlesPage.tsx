@@ -1,11 +1,9 @@
 import {
   Grid,
-  GridItem,
   Heading,
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Text,
 } from "@chakra-ui/react";
 import { articleCardsInformation } from "../config/articlesConfig";
@@ -35,6 +33,7 @@ const ArticlesPage = () => {
         {articleCardsInformation.map((cardInfo) => (
           <Card
             _hover={{ boxShadow: "1px 3px 1px #9E9E9E" }}
+            transition={"500ms"}
             key={cardInfo.articleName}
             size={"md"}
           >

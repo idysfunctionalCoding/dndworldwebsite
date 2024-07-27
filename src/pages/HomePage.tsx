@@ -50,6 +50,7 @@ const HomePage = () => {
                 rounded={"full"}
                 color={"white"}
                 _hover={{ bg: "blue.500" }}
+                transition={"500ms"}
               >
                 Me no work
               </Button>
@@ -58,6 +59,7 @@ const HomePage = () => {
                 rounded={"full"}
                 color={"white"}
                 _hover={{ bg: "whiteAlpha.500" }}
+                transition={"500ms"}
               >
                 Me no work
               </Button>

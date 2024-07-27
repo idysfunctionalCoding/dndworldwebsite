@@ -23,7 +23,10 @@ interface FilterBarProps {
   onSelectCard: (card: CardItem) => void;
 }
 
-export const CardFilterBar: React.FC<FilterBarProps> = ({ cards, onSelectCard }) => {
+export const CardFilterBar: React.FC<FilterBarProps> = ({
+  cards,
+  onSelectCard,
+}) => {
   const [filterText, setFilterText] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,7 +45,7 @@ export const CardFilterBar: React.FC<FilterBarProps> = ({ cards, onSelectCard })
         onChange={handleInputChange}
         mb={2}
       />
-      <Divider orientation='horizontal' mb={2}/>
+      <Divider orientation="horizontal" mb={2} />
       <VStack spacing={0}>
         {filteredCards.map((card) => (
           <Card
@@ -54,7 +57,11 @@ export const CardFilterBar: React.FC<FilterBarProps> = ({ cards, onSelectCard })
           >
             <CardBody>
               <HStack spacing={6}>
-                  <Image boxSize='3em' src="./images/worldmap.png" alt="Dan Abramov" />
+                <Image
+                  boxSize="3em"
+                  src="./images/worldmap.png"
+                  alt="Dan Abramov"
+                />
                 <Text>{card.name}</Text>
               </HStack>
             </CardBody>

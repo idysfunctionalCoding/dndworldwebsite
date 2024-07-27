@@ -10,10 +10,7 @@ import {
   Stack,
   VStack,
 } from "@chakra-ui/react";
-import {
-  EmblemCard,
-  nationCards,
-} from "../config/nationInfoConfigs/clickableCardInfoConfig";
+import { EmblemCard } from "../config/nationInfoConfigs/clickableCardInfoConfig";
 import { NavBar, NavBarProps } from "../components/header/navbar";
 import { Link } from "react-router-dom";
 import React from "react";
@@ -50,7 +47,7 @@ const ClickableCardInfoPage: React.FC<ClickableCardInfoPageProps> = (
               justifyContent={"center"}
             >
               {props.cards.map((card) => (
-                <Link to={card.pagelink}>
+                <Link to={card.pagelink} key={card.pagelink}>
                   <Card
                     size={"lg"}
                     borderRadius={"3xl"}
@@ -59,6 +56,8 @@ const ClickableCardInfoPage: React.FC<ClickableCardInfoPageProps> = (
                       transitionDuration: "500ms",
                       bg: "blue.700",
                     }}
+                    transition={"500ms"}
+                    key={card.cardEmblem}
                   >
                     <CardBody>
                       <VStack justifyContent={"center"} align={"center"}>

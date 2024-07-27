@@ -3,6 +3,7 @@ import xaendriadEmblem from "../../assets/emblems/dragonswordemblem.png";
 import foressianEmblem from "../../assets/emblems/griffonemblem.png";
 import netiaEmblem from "../../assets/emblems/birdemblem.png";
 import egitiaEmblem from "../../assets/emblems/snakeeemblem.png";
+import minaoEmblem from "../../assets/emblems/minaoemblem.png";
 
 export interface EmblemCard {
   cardEmblem: string;
@@ -37,7 +38,7 @@ export const nationCards: EmblemCard[] = [
     cardEmblem: netiaEmblem,
     titleText: "Duchy of Netia",
     subtext:
-      "Governed by the Netia family after rebelling against the kingdom of Minao it has a warlike history which it continues to this day",
+      "Governed by the Netia family after rebelling against the Foressian Triumvirate it maintains a hostile atmosphere to the rest of the world",
     pagelink: "/dndworldwebsite/nations/duchyofnetia",
   },
   {
@@ -46,5 +47,12 @@ export const nationCards: EmblemCard[] = [
     subtext:
       "Cursed long ago by the goddess of death and rot only the toughest and desperate live in this rotting land where next to nothing grows",
     pagelink: "/dndworldwebsite/nations/dominionofegitia",
+  },
+  {
+    cardEmblem: minaoEmblem,
+    titleText: "Kingdom of Minao",
+    subtext:
+      "An isolationist kingdom mainly made up of elves which heavily respects spirts and nature",
+    pagelink: "/dndworldwebsite/nations/kingdomofminao",
   },
 ];

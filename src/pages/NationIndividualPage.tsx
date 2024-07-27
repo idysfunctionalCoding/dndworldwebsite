@@ -148,7 +148,7 @@ const IndividualNationPage = () => {
                         </Heading>
                         {nationConfig.sectionText?.history?.majorEvents.map(
                           (entry) => (
-                            <Box pl={5}>
+                            <Box pl={5} key={entry.name}>
                               <Heading fontSize={"xl"}>{entry.name}</Heading>
                               <Text fontSize="lg" pt={2}>
                                 {entry.text}

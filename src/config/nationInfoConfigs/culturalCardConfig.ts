@@ -7,6 +7,13 @@ import dragonRider from "../../assets/culturalcards/xaendriad/dragonrider.png";
 import mercenary from "../../assets/culturalcards/xaendriad/mercenary.png";
 import dragonsMaw from "../../assets/culturalcards/xaendriad/dragonsmaw.png";
 import trialByCombat from "../../assets/culturalcards/xaendriad/trialbycombat.png";
+import diversity from "../../assets/culturalcards/minao/diversity.png";
+import festivalOfBlossoms from "../../assets/culturalcards/minao/festivalofblossoms.png";
+import musicImportance from "../../assets/culturalcards/minao/music.png";
+import spiritualImportance from "../../assets/culturalcards/minao/spirits.png";
+import criminalGroups from "../../assets/culturalcards/egitia/criminalgroup.png";
+import mysteryRuins from "../../assets/culturalcards/egitia/MysteryRuins.png";
+import wailingMarsh from "../../assets/culturalcards/egitia/WailingMarsh.png";
 
 export const earisCulturalSection: LandmarkCardProps[] = [
   {
@@ -51,5 +58,46 @@ export const xaendriadCulturalSection: LandmarkCardProps[] = [
     heading: "Colosseum Combat",
     text: "A dedicated place to either settle disputes, trial by combat, or provide entertainment",
     imageUrl: trialByCombat,
+  },
+];
+
+export const minaoCulturalSection: LandmarkCardProps[] = [
+  {
+    heading: "Many Subraces",
+    text: "Elves have a lot of subraces and the diversity is shown often in the enclaves",
+    imageUrl: diversity,
+  },
+  {
+    heading: "Festival of Blossoms",
+    text: "An annual festival at the beginning of Spring to celebrate nature returning",
+    imageUrl: festivalOfBlossoms,
+  },
+  {
+    heading: "Music",
+    text: "Music is a very important art form to the kingdom and is linked to many traditions",
+    imageUrl: musicImportance,
+  },
+  {
+    heading: "Spirits",
+    text: "Spirts are worshipped almost at the level of gods",
+    imageUrl: spiritualImportance,
+  },
+];
+
+export const egitiaCulturalSection: LandmarkCardProps[] = [
+  {
+    heading: "Cursed Lands",
+    text: "The lands here are decaying with no life for the most part",
+    imageUrl: wailingMarsh,
+  },
+  {
+    heading: "Criminal Groups",
+    text: "Criminal groups and warlords run the towns and cities",
+    imageUrl: criminalGroups,
+  },
+  {
+    heading: "Historical Mystery",
+    text: "Much is not known about the time before the Dominion of Egitia started there are many ruins of unknown origin",
+    imageUrl: mysteryRuins,
   },
 ];

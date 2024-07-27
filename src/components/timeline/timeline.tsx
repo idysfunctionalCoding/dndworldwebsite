@@ -12,7 +12,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
-  Heading
+  Heading,
 } from "@chakra-ui/react";
 
 export interface TimelineEvent {
@@ -52,6 +52,7 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
                   transform: "scale(1.2)",
                   transitionDuration: "300ms",
                 }}
+                transition={"500ms"}
                 onClick={() => handleSettingContent(event)}
               >
                 <Text fontWeight="bold">{event.date}</Text>

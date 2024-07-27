@@ -9,6 +9,17 @@ import LyraStarSeer from "../assets/people/xaendriad/lyrastarseer.png";
 import TharokIronclaw from "../assets/people/xaendriad/tharokironclaw.png";
 import ThalorinFiretongue from "../assets/people/xaendriad/thalorinfiretongue.png";
 import VaelinTheStormborn from "../assets/people/xaendriad/vaelinthestormborn.png";
+import AelianaSkwing from "../assets/people/minao/AelianaSkwing.png";
+import ArionStafal from "../assets/people/minao/ArionStafal.png";
+import CaelumBrightstar from "../assets/people/minao/caelumbrightstar.png";
+import DravenNiade from "../assets/people/minao/dravennightshade.png";
+import HilkrayneNyraruic from "../assets/people/minao/HilkrayneNyraruic.png";
+import LioraWendruic from "../assets/people/minao/liorawendruic.png";
+import ThalindraWindwhisper from "../assets/people/minao/thalindrawindwhisper.png";
+import VictorBloodthorn from "../assets/people/egitia/VictorBloodthorn.png";
+import AdkranaNilyuik from "../assets/people/egitia/AdkranaNilyuik.png";
+import Grakor from "../assets/people/egitia/Grakor.png";
+import IsabellaAndGraham from "../assets/people/egitia/IsabellaAndGrahm.png";
 
 export interface PeopleInfo {
   imageOfPerson: string;
@@ -103,6 +114,83 @@ const lyrastarseer = {
     "Head of record keeping but is also the leader of the cultural rituals that happen in the Dominion of Xaendriad. She serves as the cultural advisor on The Draconic Circle",
 };
 
+// Minao People
+const aelianaskwing = {
+  imageOfPerson: AelianaSkwing,
+  nameOfPerson: "Aeliana Skwing",
+  descriptionOfPerson:
+    "The Avariel Elf representative, she is known as the median of the group. A fair elf who is not afraid to lash out if the need for it arises.",
+};
+
+const caelumbrightstar = {
+  imageOfPerson: CaelumBrightstar,
+  nameOfPerson: "Caelum Brightstar",
+  descriptionOfPerson:
+    "The current representative of the high elves. He is known for his talent at speaking and is one of the most charismatic elves.",
+};
+
+const thalindrawindwhisper = {
+  imageOfPerson: ThalindraWindwhisper,
+  nameOfPerson: "Thalindra Windwhisper",
+  descriptionOfPerson:
+    "The free spirited nature-lover, even by Elvish standards, wood elf representative of the council. She is known for her fierce protection of the woods especially.",
+};
+
+const liorawendruic = {
+  imageOfPerson: LioraWendruic,
+  nameOfPerson: "Liora Wendruic",
+  descriptionOfPerson:
+    "A graceful religious leader on the council. Her ideas and main purpose is to stop others from trying to spread their religious ideals to their lands. This especially includes their neighbors the Earis Empire. She is the moon elf representative of the council.",
+};
+
+const dravenniade = {
+  imageOfPerson: DravenNiade,
+  nameOfPerson: "Draven Niade",
+  descriptionOfPerson:
+    "A rumble tough and ready to fight elf. He is the least interested of the members of the council but is also the oldest and is a very important resource when the council doesn’t know a way forward. He is the night elf representative of the council.",
+};
+
+const hilkraynenyraruic = {
+  imageOfPerson: HilkrayneNyraruic,
+  nameOfPerson: "Hilkrayne Nyraruic",
+  descriptionOfPerson:
+    "The blood elf representative, on the outside she appears very self-centered and money-focused. That’s why she is the expert of trade and business for the council and also is a respectable mage.",
+};
+
+const arionstafal = {
+  imageOfPerson: ArionStafal,
+  nameOfPerson: "Arion Stafal",
+  descriptionOfPerson:
+    "A race mostly interested in magic he is the most inattentive to the council as is typical by the rarer astral elves. Arion would usually rather be in his lab than at a council meeting.",
+};
+
+// Egitia People
+
+const victorbloodthorn = {
+  imageOfPerson: VictorBloodthorn,
+  nameOfPerson: "Victor Bloodthorn",
+  descriptionOfPerson:
+    "The current warlord in the capital of Handicrilu. He keeps his men and the people of this area in control through fear as he is a respectable fighter and a known necromancer wielding both the living and dead to fight his battles.",
+};
+const adkranaNilyuik = {
+  imageOfPerson: AdkranaNilyuik,
+  nameOfPerson: "Adkrana Nilyuik",
+  descriptionOfPerson:
+    "The charismatic and feared leader of the dominant cult in Egitia, dedicated to the forgotten goddess of death, Ereshkigal. She wields considerable influence through her control of the cult's followers and their dark rituals. Her necromantic powers are legendary, and she uses them to maintain her position within the cult.",
+};
+const grakor = {
+  imageOfPerson: Grakor,
+  nameOfPerson: "Grakor the Beast",
+  descriptionOfPerson:
+    "Grakor leads the Iron Claw Gang, one of the most notorious and violent criminal organizations in Egitia. His gang controls much of the black market trade in the southern parts of the territory.",
+};
+const isabellaAndGraham = {
+  imageOfPerson: IsabellaAndGraham,
+  nameOfPerson: "Isabella and Graham Thorn",
+  descriptionOfPerson:
+    "The married couple is the joint head of the information guild within the Dominion of Egitia known as The Underbelly’s Shadow. Their network gathers intelligence and sells it to the highest bidder or even multiple of them if the price is right. A valuable ally and dangerous enemy to have.",
+};
+
 export const earisPeople: NationsPeople = {
   political: [
     seraphinaAurelia,
@@ -122,4 +210,20 @@ export const xaendriadPeople: NationsPeople = {
     tharokironclaw,
     lyrastarseer,
   ],
+};
+
+export const minaoPeople: NationsPeople = {
+  political: [
+    aelianaskwing,
+    caelumbrightstar,
+    thalindrawindwhisper,
+    dravenniade,
+    liorawendruic,
+    hilkraynenyraruic,
+    arionstafal,
+  ],
+};
+
+export const egitiaPeople: NationsPeople = {
+  political: [victorbloodthorn, adkranaNilyuik, grakor, isabellaAndGraham],
 };
